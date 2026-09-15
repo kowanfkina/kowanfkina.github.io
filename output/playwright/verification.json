@@ -1,0 +1,47 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "lang": "en",
+    "checks": "layout, localization, lazy video, keyboard tabs, modal focus, loop, film, images passed"
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "lang": "zh",
+    "checks": "layout, localization, lazy video, keyboard tabs, modal focus, loop, film, images passed"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "lang": "zh",
+    "checks": "layout, localization, lazy video, keyboard tabs, modal focus, loop, film, images passed"
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "lang": "en",
+    "checks": "layout, localization, lazy video, keyboard tabs, modal focus, loop, film, images passed"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "lang": "en",
+    "checks": "layout, localization, lazy video, keyboard tabs, modal focus, loop, film, images passed"
+  },
+  {
+    "noJavaScript": "content, contact and feature fallbacks passed"
+  },
+  {
+    "desktopScrollStory": "all 3 phases passed",
+    "localHeadlessFrameTiming": {
+      "sampleFrames": 151,
+      "medianMs": 16.699999999999818,
+      "p95Ms": 16.799999999999727,
+      "over33ms": 0
+    }
+  },
+  {
+    "blockedStorageAndNoObserver": "passed"
+  }
+]

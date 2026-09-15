@@ -1,0 +1,44 @@
+[
+  {
+    "locale": "ja-JP",
+    "resolved": "ja",
+    "persistence": "passed",
+    "heroViews": "passed",
+    "details": "passed"
+  },
+  {
+    "locale": "es-MX",
+    "resolved": "es",
+    "persistence": "passed",
+    "heroViews": "passed",
+    "details": "passed"
+  },
+  {
+    "locale": "zh-TW",
+    "resolved": "zh-CN",
+    "persistence": "passed",
+    "heroViews": "passed",
+    "details": "passed"
+  },
+  {
+    "locale": "en-GB",
+    "resolved": "en",
+    "persistence": "passed",
+    "heroViews": "passed",
+    "details": "passed"
+  },
+  {
+    "locale": "fr-FR",
+    "resolved": "en",
+    "persistence": "passed",
+    "heroViews": "passed",
+    "details": "passed"
+  },
+  {
+    "orderedBrowserListAndBlockedStorage": "passed"
+  },
+  {
+    "noJS": "English fallback passed",
+    "responsive": "16 viewport/locale combinations passed"
+  }
+]

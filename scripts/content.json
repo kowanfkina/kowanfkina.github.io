@@ -1,0 +1,944 @@
+[
+  {
+    "id": 1,
+    "slug": "six-image-compare",
+    "theme": "dark",
+    "accent": "#82b4ff",
+    "glow": "#274677",
+    "zh-Hans": {
+      "source": 0,
+      "label": "最多六图 · 同步对比",
+      "title": [
+        "六张同屏。",
+        "差别，一眼见。"
+      ],
+      "description": "从两图到六图，把不同版本放在一起。同步缩放与平移，让目光始终落在同一处细节。",
+      "features": [
+        [
+          "2–6 图灵活布局",
+          "适应选片、版本复核与多方案比较。"
+        ],
+        [
+          "同步缩放与平移",
+          "联动查看同一位置，省去反复定位。"
+        ],
+        [
+          "画面与数据一起看",
+          "结合直方图、区域统计与像素信息。"
+        ]
+      ],
+      "screenLabel": "多图对比工作空间",
+      "caption": "同一处细节，同时检视。",
+      "footer": "选片 · 修图复核 · 图像版本比较"
+    },
+    "en-US": {
+      "source": 1,
+      "label": "UP TO SIX · SIDE BY SIDE",
+      "title": [
+        "Six images.",
+        "One clear",
+        "comparison."
+      ],
+      "description": "Compare two to six images with synchronized zoom and pan. Keep every version focused on the same detail.",
+      "features": [
+        [
+          "Flexible 2–6 image layouts",
+          "Compare selects, edits, and alternate versions."
+        ],
+        [
+          "Synchronized navigation",
+          "Zoom and pan across views together."
+        ],
+        [
+          "Images meet insight",
+          "Keep histograms and pixel data in view."
+        ]
+      ],
+      "screenLabel": "Multi-image comparison workspace",
+      "caption": "The same detail. Every version in view.",
+      "footer": "Photo selection · Retouch review · Version comparison"
+    },
+    "ja": {
+      "label": "最大6枚の同期比較",
+      "title": [
+        "6 枚を並べて。違いをひと目で。"
+      ],
+      "description": "2〜6枚の画像を並べ、ズームと移動を同期。同じ位置の細部を比較できます。",
+      "features": [
+        [
+          "2〜6枚の柔軟なレイアウト",
+          "写真選び、修正確認、複数バージョンの比較に。"
+        ],
+        [
+          "ズームと移動を同期",
+          "画像間で同じ位置をすぐに確認できます。"
+        ],
+        [
+          "画面とデータを一緒に",
+          "ヒストグラム、領域統計、ピクセル情報を表示。"
+        ]
+      ],
+      "screenLabel": "複数画像の比較ワークスペース"
+    },
+    "es": {
+      "label": "HASTA SEIS IMÁGENES",
+      "title": [
+        "Seis imágenes. Una comparación clara."
+      ],
+      "description": "Compara de dos a seis imágenes con zoom y desplazamiento sincronizados para observar el mismo detalle.",
+      "features": [
+        [
+          "Diseños de 2 a 6 imágenes",
+          "Compara selecciones, retoques y versiones."
+        ],
+        [
+          "Navegación sincronizada",
+          "Amplía y desplaza todas las vistas a la vez."
+        ],
+        [
+          "Imágenes con información",
+          "Consulta histogramas, estadísticas y datos de píxeles."
+        ]
+      ],
+      "screenLabel": "Espacio de comparación de imágenes"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "tolerance-difference",
+    "theme": "dark",
+    "accent": "#ff8dbd",
+    "glow": "#653051",
+    "zh-Hans": {
+      "source": 3,
+      "label": "两图容差 · 精准对比",
+      "title": [
+        "细微差异，",
+        "清晰呈现。"
+      ],
+      "description": "把两张图片的差异转成可视化差异图。调节容差阈值，聚焦超过阈值的变化。",
+      "features": [
+        [
+          "原图与差异图并排",
+          "同时查看两张原图及中间差异结果。"
+        ],
+        [
+          "容差阈值可调",
+          "按检查需求控制差异显示的敏感度。"
+        ],
+        [
+          "同步定位细节",
+          "联动缩放和平移，逐处核对改动。"
+        ]
+      ],
+      "screenLabel": "原图 A / 差异图 / 原图 B",
+      "caption": "从目测判断，走向像素级核对。",
+      "footer": "修图验收 · 版本差异 · 图像质量检查"
+    },
+    "en-US": {
+      "source": 2,
+      "label": "TOLERANCE · DIFFERENCE VIEW",
+      "title": [
+        "Small changes.",
+        "Clearly visible."
+      ],
+      "description": "Turn differences between two images into a visual map. Adjust tolerance to focus on changes above your threshold.",
+      "features": [
+        [
+          "Originals beside the difference",
+          "Inspect both sources and the result together."
+        ],
+        [
+          "Adjustable tolerance",
+          "Set the sensitivity for the task at hand."
+        ],
+        [
+          "Synchronized inspection",
+          "Zoom and pan together to verify each change."
+        ]
+      ],
+      "screenLabel": "Original A / Difference / Original B",
+      "caption": "From visual judgment to pixel-level verification.",
+      "footer": "Retouch approval · Version differences · Image QA"
+    },
+    "ja": {
+      "label": "許容値で差分を比較",
+      "title": [
+        "わずかな違いも、はっきりと。"
+      ],
+      "description": "2枚の画像の違いを差分マップで表示。許容値を調整し、しきい値を超える変化に注目できます。",
+      "features": [
+        [
+          "原画像と差分を並べて",
+          "2枚の原画像と比較結果を同時に確認。"
+        ],
+        [
+          "許容値を調整",
+          "確認したい内容に合わせて感度を設定。"
+        ],
+        [
+          "細部を同期して確認",
+          "同じ位置をズーム・移動しながら変更を検証。"
+        ]
+      ],
+      "screenLabel": "原画像 A / 差分 / 原画像 B"
+    },
+    "es": {
+      "label": "TOLERANCIA Y DIFERENCIAS",
+      "title": [
+        "Pequeños cambios. Claramente visibles."
+      ],
+      "description": "Convierte las diferencias entre dos imágenes en un mapa visual. Ajusta la tolerancia para destacar los cambios que superen el umbral.",
+      "features": [
+        [
+          "Originales junto a la diferencia",
+          "Examina ambas imágenes y el resultado a la vez."
+        ],
+        [
+          "Tolerancia ajustable",
+          "Configura la sensibilidad según la tarea."
+        ],
+        [
+          "Inspección sincronizada",
+          "Amplía y desplaza las vistas para comprobar cambios."
+        ]
+      ],
+      "screenLabel": "Original A / Diferencia / Original B"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "hdr-display",
+    "theme": "dark",
+    "accent": "#cab0ff",
+    "glow": "#40367d",
+    "zh-Hans": {
+      "source": 4,
+      "label": "全新 HDR 显示",
+      "title": [
+        "让高光，",
+        "更有层次。"
+      ],
+      "description": "在支持的显示设备上呈现 HDR 图像。随时切换 HDR 与 SDR，查看不同显示模式下的画面。",
+      "features": [
+        [
+          "HDR 图像自动识别",
+          "通过 HDR 标识了解图像状态。"
+        ],
+        [
+          "HDR / SDR 自由切换",
+          "在同一工作流中比较显示效果。"
+        ],
+        [
+          "可选自动 HDR",
+          "在设置中开启，适配你的浏览习惯。"
+        ]
+      ],
+      "screenLabel": "HDR / SDR 显示对照",
+      "caption": "真实界面截屏；静态宣传图无法完整呈现 HDR 亮度。",
+      "footer": "HDR 效果取决于源图像与显示设备支持。"
+    },
+    "en-US": {
+      "source": 5,
+      "label": "NEW · HDR DISPLAY",
+      "title": [
+        "Give highlights",
+        "room to shine."
+      ],
+      "description": "View HDR images on supported displays. Switch between HDR and SDR to inspect how each mode presents your image.",
+      "features": [
+        [
+          "Automatic HDR detection",
+          "Identify HDR images at a glance with badges."
+        ],
+        [
+          "HDR / SDR switching",
+          "Compare display modes in one workflow."
+        ],
+        [
+          "Optional automatic HDR",
+          "Enable it in Settings for everyday browsing."
+        ]
+      ],
+      "screenLabel": "HDR / SDR display comparison",
+      "caption": "Actual app capture. Static artwork cannot reproduce full HDR brightness.",
+      "footer": "HDR appearance depends on the source image and display support."
+    },
+    "ja": {
+      "label": "新しい HDR 表示",
+      "title": [
+        "ハイライトに、もっと表情を。"
+      ],
+      "description": "対応ディスプレイで HDR 画像を表示。HDR と SDR を切り替え、表示モードによる違いを確認できます。",
+      "features": [
+        [
+          "HDR 画像を自動検出",
+          "バッジで HDR 画像をひと目で確認。"
+        ],
+        [
+          "HDR / SDR を切り替え",
+          "ひとつのワークフローで表示を比較。"
+        ],
+        [
+          "自動 HDR を選択可能",
+          "設定で有効にして、日常の閲覧に。"
+        ]
+      ],
+      "screenLabel": "HDR / SDR 表示比較"
+    },
+    "es": {
+      "label": "NUEVA VISUALIZACIÓN HDR",
+      "title": [
+        "Da vida a las altas luces."
+      ],
+      "description": "Visualiza imágenes HDR en pantallas compatibles. Alterna entre HDR y SDR para examinar cada modo.",
+      "features": [
+        [
+          "Detección automática de HDR",
+          "Identifica las imágenes HDR con sus indicadores."
+        ],
+        [
+          "Cambio entre HDR y SDR",
+          "Compara los modos dentro del mismo flujo."
+        ],
+        [
+          "HDR automático opcional",
+          "Actívalo en Ajustes para la exploración diaria."
+        ]
+      ],
+      "screenLabel": "Comparación de visualización HDR / SDR"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "main-workspace",
+    "theme": "light",
+    "accent": "#286ee8",
+    "glow": "#b4d5ff",
+    "zh-Hans": {
+      "source": 7,
+      "label": "你的 Mac 图像工作空间",
+      "title": [
+        "看图、选图、",
+        "比较、创作。",
+        "一站完成。"
+      ],
+      "description": "从日常浏览到专业检视，把图片管理、精准对比和常用创作工具，收进同一个工作空间。",
+      "features": [
+        [
+          "100+ 格式，打开就看",
+          "覆盖常用图片与 RAW，支持压缩包直看。"
+        ],
+        [
+          "好图片，随手留下",
+          "1–5 星评级、星级筛选、Finder 标签与文件中转站。"
+        ],
+        [
+          "从整理到输出",
+          "批量重命名、旋转 / 镜像、裁剪与尺寸调整。"
+        ]
+      ],
+      "screenLabel": "浏览、评级与文件中转站",
+      "caption": "目录导航 · 多栏浏览 · 快速预览 · 文件整理",
+      "tools": [
+        "最多六图同步对比",
+        "拼图 / GIF 制作",
+        "ICC 色域转换",
+        "HDR 显示 / 专业评审"
+      ]
+    },
+    "en-US": {
+      "source": 6,
+      "label": "YOUR IMAGE WORKSPACE FOR MAC",
+      "title": [
+        "Browse. Compare.",
+        "Create.",
+        "All in one."
+      ],
+      "description": "Bring image browsing, precise comparison, and everyday creative tools into one focused Mac workspace.",
+      "features": [
+        [
+          "100+ formats. Ready to view.",
+          "Browse images, RAW files, and supported archives."
+        ],
+        [
+          "Keep your best images close",
+          "1–5 stars, rating filters, Finder tags, and a file tray."
+        ],
+        [
+          "Organize through to output",
+          "Batch rename, rotate, mirror, crop, and resize."
+        ]
+      ],
+      "screenLabel": "Image browser, ratings, and file tray",
+      "caption": "Folder navigation · Multi-column browsing · Quick preview",
+      "tools": [
+        "Up to six synchronized views",
+        "Stitch images / Create GIFs",
+        "ICC color conversion",
+        "HDR display / Image reviews"
+      ]
+    },
+    "ja": {
+      "label": "MAC の画像ワークスペース",
+      "title": [
+        "見る。比べる。つくる。ひとつの場所で。"
+      ],
+      "description": "画像の閲覧、精密な比較、日常の制作ツールを、Mac のひとつのワークスペースに。",
+      "features": [
+        [
+          "100以上の形式を表示",
+          "一般的な画像、RAW、対応アーカイブを閲覧。"
+        ],
+        [
+          "お気に入りを手元に",
+          "1〜5つ星、評価フィルタ、Finderタグ、ファイルトレイ。"
+        ],
+        [
+          "整理から出力まで",
+          "一括リネーム、回転、反転、切り抜き、サイズ変更。"
+        ]
+      ],
+      "screenLabel": "画像ブラウザ、評価、ファイルトレイ"
+    },
+    "es": {
+      "label": "TU ESPACIO DE IMÁGENES PARA MAC",
+      "title": [
+        "Explora. Compara. Crea. Todo en uno."
+      ],
+      "description": "Reúne la exploración, la comparación precisa y las herramientas creativas en un solo espacio para Mac.",
+      "features": [
+        [
+          "Más de 100 formatos",
+          "Explora imágenes, RAW y archivos comprimidos compatibles."
+        ],
+        [
+          "Tus favoritas, siempre a mano",
+          "Estrellas, filtros, etiquetas de Finder y bandeja de archivos."
+        ],
+        [
+          "Organiza y exporta",
+          "Renombra por lotes, gira, refleja, recorta y cambia el tamaño."
+        ]
+      ],
+      "screenLabel": "Explorador, valoraciones y bandeja de archivos"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "image-stitching",
+    "theme": "warm",
+    "accent": "#9b622b",
+    "glow": "#edd2a4",
+    "zh-Hans": {
+      "source": 9,
+      "label": "图片拼接工作台",
+      "title": [
+        "把多张精彩，",
+        "拼成一张。"
+      ],
+      "description": "为作品展示、图像对照和内容分享排好版。在同一个工作台调整布局，预览结果并导出。",
+      "features": [
+        [
+          "横向或纵向拼接",
+          "根据展示需求组织图片顺序与方向。"
+        ],
+        [
+          "调整间距与背景",
+          "让边距、留白与背景配合你的画面。"
+        ],
+        [
+          "预览后直接导出",
+          "从素材组合到成图输出，一气呵成。"
+        ]
+      ],
+      "screenLabel": "拼接布局与实时预览",
+      "caption": "组织画面，让展示更完整。",
+      "footer": "作品展示 · 对比排版 · 分享长图"
+    },
+    "en-US": {
+      "source": 8,
+      "label": "IMAGE STITCHING WORKSPACE",
+      "title": [
+        "Many images.",
+        "One finished",
+        "composition."
+      ],
+      "description": "Build a layout for your portfolio, comparisons, or sharing. Arrange images, preview the result, and export in one workspace.",
+      "features": [
+        [
+          "Horizontal or vertical layouts",
+          "Choose the order and direction of your images."
+        ],
+        [
+          "Spacing and backgrounds",
+          "Shape the margins and backdrop of your layout."
+        ],
+        [
+          "Preview, then export",
+          "Take your images from selection to composition."
+        ]
+      ],
+      "screenLabel": "Stitching controls and live preview",
+      "caption": "Bring the whole picture together.",
+      "footer": "Portfolio layouts · Comparison sheets · Images for sharing"
+    },
+    "ja": {
+      "label": "画像結合ワークスペース",
+      "title": [
+        "複数の画像を、ひとつの作品に。"
+      ],
+      "description": "作品紹介、比較、共有のために画像を配置。レイアウトを調整し、プレビューして書き出せます。",
+      "features": [
+        [
+          "横方向・縦方向に結合",
+          "画像の順番と方向を選択。"
+        ],
+        [
+          "余白と背景を調整",
+          "画面に合わせて間隔や背景を設定。"
+        ],
+        [
+          "確認して書き出す",
+          "素材の選択から完成画像まで。"
+        ]
+      ],
+      "screenLabel": "画像結合の設定とプレビュー"
+    },
+    "es": {
+      "label": "COMPOSICIÓN DE IMÁGENES",
+      "title": [
+        "Varias imágenes. Una composición."
+      ],
+      "description": "Prepara diseños para tu portafolio, comparaciones o publicaciones. Organiza, previsualiza y exporta en un solo lugar.",
+      "features": [
+        [
+          "Diseños horizontales o verticales",
+          "Elige el orden y la dirección de las imágenes."
+        ],
+        [
+          "Espaciado y fondos",
+          "Ajusta los márgenes y el fondo de la composición."
+        ],
+        [
+          "Previsualiza y exporta",
+          "Lleva tu selección hasta una imagen terminada."
+        ]
+      ],
+      "screenLabel": "Controles de composición y vista previa"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "review-anonymous-ranking",
+    "theme": "light",
+    "accent": "#6756c9",
+    "glow": "#d5cdf8",
+    "zh-Hans": {
+      "source": 11,
+      "label": "评审模式 / 匿名天梯",
+      "title": [
+        "专注画质，",
+        "减少偏见。"
+      ],
+      "description": "用评审模式逐项打分，或用匿名天梯比较优劣。把一次次判断，组织成可保存的评测项目。",
+      "features": [
+        [
+          "评审与匿名天梯",
+          "根据任务选择评分或匿名排序。"
+        ],
+        [
+          "配对与顺序随机化",
+          "组织数据源，随机化组与窗口顺序。"
+        ],
+        [
+          "项目随时继续",
+          "每种模式最多保存 9 个项目，支持导入导出。"
+        ]
+      ],
+      "screenLabel": "评测项目与数据源配对",
+      "caption": "从准备素材，到建立一致的评测流程。",
+      "footer": "算法效果对比 · 图像方案评估 · 专业选片"
+    },
+    "en-US": {
+      "source": 10,
+      "label": "REVIEWS / ANONYMOUS RANKING",
+      "title": [
+        "Focus on quality.",
+        "Reduce bias."
+      ],
+      "description": "Score images in Review Mode or compare them with Anonymous Ranking. Turn individual decisions into saved evaluation projects.",
+      "features": [
+        [
+          "Two ways to evaluate",
+          "Choose image scoring or anonymous ranking."
+        ],
+        [
+          "Pair and randomize",
+          "Set sources, then randomize groups and panes."
+        ],
+        [
+          "Pick up where you left off",
+          "Save up to 9 projects per mode. Import and export."
+        ]
+      ],
+      "screenLabel": "Evaluation projects and source pairing",
+      "caption": "A consistent process, starting with your source images.",
+      "footer": "Algorithm comparisons · Image evaluation · Photo selection"
+    },
+    "ja": {
+      "label": "レビュー / 匿名ランキング",
+      "title": [
+        "画質に集中。先入観を減らす。"
+      ],
+      "description": "レビューモードで採点、または匿名ランキングで比較。判断を保存可能な評価プロジェクトにまとめられます。",
+      "features": [
+        [
+          "2つの評価方法",
+          "採点と匿名の順位付けを使い分け。"
+        ],
+        [
+          "ペア設定とランダム化",
+          "データソースを設定し、グループとペインの順番を変更。"
+        ],
+        [
+          "続きから再開",
+          "モードごとに最大9件を保存。インポート・エクスポート対応。"
+        ]
+      ],
+      "screenLabel": "評価プロジェクトと画像の組み合わせ"
+    },
+    "es": {
+      "label": "REVISIÓN / CLASIFICACIÓN ANÓNIMA",
+      "title": [
+        "Céntrate en la calidad. Reduce sesgos."
+      ],
+      "description": "Puntúa imágenes o compáralas de forma anónima. Organiza tus decisiones en proyectos de evaluación guardados.",
+      "features": [
+        [
+          "Dos formas de evaluar",
+          "Elige puntuación o clasificación anónima."
+        ],
+        [
+          "Empareja y aleatoriza",
+          "Configura fuentes y aleatoriza grupos y paneles."
+        ],
+        [
+          "Continúa cuando quieras",
+          "Guarda hasta 9 proyectos por modo. Importa y exporta."
+        ]
+      ],
+      "screenLabel": "Proyectos de evaluación y emparejamiento"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "review-workspace",
+    "theme": "dark",
+    "accent": "#f0bb81",
+    "glow": "#4e3d2d",
+    "zh-Hans": {
+      "source": 12,
+      "label": "专业评审工作界面",
+      "title": [
+        "边看边评，",
+        "判断有据。"
+      ],
+      "description": "并排检视图像，在评分控制台直接记录判断。让看细节、打分与标记问题保持连贯。",
+      "features": [
+        [
+          "图像与评分同屏",
+          "减少来回切换，专注当前这一组。"
+        ],
+        [
+          "记录问题标签",
+          "把发现的问题纳入评审记录。"
+        ],
+        [
+          "结果汇总与报告",
+          "回看分组评分，为复核保留依据。"
+        ]
+      ],
+      "screenLabel": "图像对比与评分控制台",
+      "caption": "看清细节，也留下判断。",
+      "footer": "图像质量评审 · 修图复核 · 评测记录"
+    },
+    "en-US": {
+      "source": 13,
+      "label": "PROFESSIONAL REVIEW WORKSPACE",
+      "title": [
+        "Inspect.",
+        "Score.",
+        "Stay focused."
+      ],
+      "description": "Compare images side by side and record decisions in the scoring console. Keep inspection and evaluation in the same flow.",
+      "features": [
+        [
+          "Images and scoring together",
+          "Stay focused on the current group."
+        ],
+        [
+          "Capture issue tags",
+          "Record the problems you find as you review."
+        ],
+        [
+          "Summaries and reports",
+          "Revisit group scores and review your results."
+        ]
+      ],
+      "screenLabel": "Image comparison and scoring console",
+      "caption": "See the detail. Record the decision.",
+      "footer": "Image quality review · Retouch checks · Evaluation records"
+    },
+    "ja": {
+      "label": "プロフェッショナルなレビュー",
+      "title": [
+        "見ながら評価。判断を記録。"
+      ],
+      "description": "画像を並べて確認し、採点コンソールで判断を記録。観察と評価をひとつの流れで進められます。",
+      "features": [
+        [
+          "画像と採点を同時に",
+          "現在のグループに集中できます。"
+        ],
+        [
+          "問題タグを記録",
+          "見つけた問題をレビューに残せます。"
+        ],
+        [
+          "集計とレポート",
+          "グループごとの採点を振り返り、結果を確認。"
+        ]
+      ],
+      "screenLabel": "画像比較と採点コンソール"
+    },
+    "es": {
+      "label": "ESPACIO DE REVISIÓN PROFESIONAL",
+      "title": [
+        "Inspecciona. Puntúa. Concéntrate."
+      ],
+      "description": "Compara imágenes en paralelo y registra tus decisiones en la consola de puntuación. Revisa y evalúa sin interrumpir el flujo.",
+      "features": [
+        [
+          "Imágenes y puntuación juntas",
+          "Céntrate en el grupo actual."
+        ],
+        [
+          "Etiquetas de problemas",
+          "Anota los problemas que encuentres al revisar."
+        ],
+        [
+          "Resúmenes e informes",
+          "Consulta las puntuaciones y revisa tus resultados."
+        ]
+      ],
+      "screenLabel": "Comparación y consola de puntuación"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "region-statistics",
+    "theme": "dark",
+    "accent": "#76d6c5",
+    "glow": "#20524f",
+    "zh-Hans": {
+      "source": 14,
+      "label": "任意区域 · 图像统计",
+      "title": [
+        "选中一处，",
+        "读懂细节。"
+      ],
+      "description": "在图像中框选你关心的区域，将局部画面与颜色、亮度数据一起检视，让比较更有依据。",
+      "features": [
+        [
+          "自由框选分析区域",
+          "围绕主体、阴影或高光建立观察范围。"
+        ],
+        [
+          "RGB / HSV / 亮度",
+          "结合区域统计与直方图检查图像。"
+        ],
+        [
+          "多图联动检视",
+          "在对照画面中同步关注同一处细节。"
+        ]
+      ],
+      "screenLabel": "多图区域选择与统计面板",
+      "caption": "从整张图像，深入到你关心的区域。",
+      "footer": "局部色彩检查 · 亮度分析 · 区域质量对比"
+    },
+    "en-US": {
+      "source": 15,
+      "label": "REGION OF INTEREST · STATISTICS",
+      "title": [
+        "Select a region.",
+        "See the data."
+      ],
+      "description": "Choose any region of interest and inspect its color and luminance data alongside the image. Give visual comparisons more context.",
+      "features": [
+        [
+          "Choose your area of focus",
+          "Inspect a subject, shadow, or highlight region."
+        ],
+        [
+          "RGB / HSV / luminance",
+          "Read regional statistics alongside histograms."
+        ],
+        [
+          "Linked image inspection",
+          "Focus on the same detail across your views."
+        ]
+      ],
+      "screenLabel": "Multi-image region selection and statistics",
+      "caption": "From the whole image to the region that matters.",
+      "footer": "Local color checks · Luminance analysis · Regional comparisons"
+    },
+    "ja": {
+      "label": "選択領域の統計",
+      "title": [
+        "領域を選んで、データを読む。"
+      ],
+      "description": "注目する領域を選択し、色と輝度のデータを画像と一緒に確認。比較の手がかりが増えます。",
+      "features": [
+        [
+          "調べたい範囲を自由に",
+          "被写体、シャドウ、ハイライトを確認。"
+        ],
+        [
+          "RGB / HSV / 輝度",
+          "領域統計とヒストグラムをまとめて表示。"
+        ],
+        [
+          "複数画像を連動して確認",
+          "同じ細部に注目して比較できます。"
+        ]
+      ],
+      "screenLabel": "複数画像の領域選択と統計"
+    },
+    "es": {
+      "label": "ESTADÍSTICAS POR REGIÓN",
+      "title": [
+        "Selecciona una región. Consulta los datos."
+      ],
+      "description": "Elige una zona y examina su color y luminancia junto a la imagen para comparar con más información.",
+      "features": [
+        [
+          "Elige la zona de interés",
+          "Examina sujetos, sombras o altas luces."
+        ],
+        [
+          "RGB / HSV / luminancia",
+          "Consulta estadísticas e histogramas."
+        ],
+        [
+          "Inspección vinculada",
+          "Observa el mismo detalle en varias vistas."
+        ]
+      ],
+      "screenLabel": "Selección de regiones y estadísticas"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "professional-pixel-grid",
+    "theme": "dark",
+    "accent": "#84caff",
+    "glow": "#224d68",
+    "zh-Hans": {
+      "source": 17,
+      "label": "专业模式 · 高倍率像素网格",
+      "title": [
+        "放大到像素，",
+        "细节有数。"
+      ],
+      "description": "高倍率下直接查看像素网格与数值。将多个版本放在一起，检查色彩变化与细小差异。",
+      "features": [
+        [
+          "像素网格与数值叠加",
+          "在放大的画面上直接读取像素信息。"
+        ],
+        [
+          "多图同步放大",
+          "对照同一位置，更容易发现细小变化。"
+        ],
+        [
+          "统计信息持续可见",
+          "结合直方图与区域数据进行专业检视。"
+        ]
+      ],
+      "screenLabel": "高倍率像素网格对比",
+      "caption": "把每一次放大，变成更精确的观察。",
+      "footer": "像素级检查 · 色彩复核 · 图像算法分析"
+    },
+    "en-US": {
+      "source": 16,
+      "label": "PRO MODE · HIGH-ZOOM PIXEL GRID",
+      "title": [
+        "Every pixel.",
+        "In clear detail."
+      ],
+      "description": "Inspect pixel grids and values at high zoom. Put versions side by side to examine color changes and fine differences.",
+      "features": [
+        [
+          "Pixel grids with value overlays",
+          "Read pixel information directly on the image."
+        ],
+        [
+          "Synchronized high zoom",
+          "Compare the same position across versions."
+        ],
+        [
+          "Keep the evidence in view",
+          "Use histograms and regional data as you inspect."
+        ]
+      ],
+      "screenLabel": "High-zoom pixel grid comparison",
+      "caption": "Turn a closer look into a more precise inspection.",
+      "footer": "Pixel-level inspection · Color review · Image algorithm analysis"
+    },
+    "ja": {
+      "label": "プロモード / ピクセルグリッド",
+      "title": [
+        "ピクセルひとつまで、くっきり。"
+      ],
+      "description": "高倍率でピクセルグリッドと数値を表示。バージョンを並べ、色の変化や細かな違いを確認できます。",
+      "features": [
+        [
+          "グリッドと数値を重ねて表示",
+          "画像上でピクセル情報を直接確認。"
+        ],
+        [
+          "高倍率ズームを同期",
+          "同じ位置でバージョン間の違いを比較。"
+        ],
+        [
+          "統計情報も一緒に",
+          "ヒストグラムと領域データを活用。"
+        ]
+      ],
+      "screenLabel": "高倍率ピクセルグリッド比較"
+    },
+    "es": {
+      "label": "MODO PRO / CUADRÍCULA DE PÍXELES",
+      "title": [
+        "Cada píxel. Con todo detalle."
+      ],
+      "description": "Examina la cuadrícula y los valores con gran aumento. Compara versiones para detectar cambios de color y diferencias sutiles.",
+      "features": [
+        [
+          "Cuadrículas con valores",
+          "Lee la información de píxeles sobre la imagen."
+        ],
+        [
+          "Gran aumento sincronizado",
+          "Compara la misma posición entre versiones."
+        ],
+        [
+          "Datos siempre a la vista",
+          "Usa histogramas y estadísticas durante la inspección."
+        ]
+      ],
+      "screenLabel": "Comparación ampliada de píxeles"
+    }
+  }
+]
