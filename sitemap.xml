@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kowanfkina.github.io/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kowanfkina.github.io/?lang=en" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://kowanfkina.github.io/?lang=zh" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://kowanfkina.github.io/?lang=ja" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://kowanfkina.github.io/?lang=es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kowanfkina.github.io/" />
+    <loc>https://dominoimg.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dominoimg.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://dominoimg.com/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dominoimg.com/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://dominoimg.com/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dominoimg.com/" />
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/?lang=zh" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/?lang=ja" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dominoimg.com/Domino-Image-Viewer-Privacy-Policy/terms/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>

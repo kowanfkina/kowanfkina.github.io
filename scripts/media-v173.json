@@ -1,0 +1,302 @@
+{
+  "1": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-53-22.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-53-37.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "2": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-32-42.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-32-52.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "3": {
+    "en": {
+      "source": "Screenshot_2026-10-12_02-02-23.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_02-02-33.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "4": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-28-41.jpg",
+      "width": 2480,
+      "height": 1778
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-29-01.jpg",
+      "width": 2480,
+      "height": 1778
+    }
+  },
+  "5": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-49-06.jpg",
+      "width": 2240,
+      "height": 1424
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-48-57.jpg",
+      "width": 2240,
+      "height": 1424
+    }
+  },
+  "6": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-35-03.jpg",
+      "width": 2240,
+      "height": 1624
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-35-15.jpg",
+      "width": 2240,
+      "height": 1624
+    }
+  },
+  "7": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-46-00.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-45-45.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "8": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-29-49.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-29-28.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "9": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-30-11.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-30-21.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "10": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-47-05.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-47-16.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "11": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-48-00.jpg",
+      "width": 2160,
+      "height": 1584
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-47-47.jpg",
+      "width": 2160,
+      "height": 1584
+    }
+  },
+  "12": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-49-18.jpg",
+      "width": 2240,
+      "height": 1424
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-49-29.jpg",
+      "width": 2240,
+      "height": 1424
+    }
+  },
+  "13": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-50-43.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-50-29.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "14": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-51-18.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-51-30.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "15": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-52-51.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-52-38.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "16": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-31-03.jpg",
+      "width": 3000,
+      "height": 1984
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-31-15.jpg",
+      "width": 3000,
+      "height": 1984
+    }
+  },
+  "17": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-32-09.jpg",
+      "width": 3000,
+      "height": 1984
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-31-53.jpg",
+      "width": 3000,
+      "height": 1984
+    }
+  },
+  "18": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-55-04.jpg",
+      "width": 2296,
+      "height": 1984
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-54-52.jpg",
+      "width": 2296,
+      "height": 1984
+    }
+  },
+  "19": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-55-37.jpg",
+      "width": 2296,
+      "height": 2066
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-55-45.jpg",
+      "width": 2296,
+      "height": 2066
+    }
+  },
+  "20": {
+    "en": {
+      "source": "Screenshot_2026-10-12_01-56-22.jpg",
+      "width": 2296,
+      "height": 2066
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_01-56-11.jpg",
+      "width": 2296,
+      "height": 2066
+    }
+  },
+  "21": {
+    "en": {
+      "source": "Screenshot_2026-10-12_00-33-58.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "Screenshot_2026-10-12_00-33-43.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "22": {
+    "en": {
+      "source": "AppStore/en/10-crop-resize.png",
+      "width": 2880,
+      "height": 1800
+    },
+    "zh": {
+      "source": "AppStore/zh/10-crop-resize.png",
+      "width": 2880,
+      "height": 1800
+    }
+  },
+  "23": {
+    "en": {
+      "source": "AppStore/en/09-batch-rename.png",
+      "width": 2880,
+      "height": 1800
+    },
+    "zh": {
+      "source": "AppStore/zh/09-batch-rename.png",
+      "width": 2880,
+      "height": 1800
+    }
+  },
+  "24": {
+    "en": {
+      "source": "assets/product/v173/source/roi-en.jpg",
+      "width": 3600,
+      "height": 2260
+    },
+    "zh": {
+      "source": "assets/product/v173/source/roi-zh.jpg",
+      "width": 3600,
+      "height": 2260
+    }
+  },
+  "25": {
+    "en": {
+      "source": "assets/product/v173/source/grading-en.jpg",
+      "width": 3000,
+      "height": 1984
+    },
+    "zh": {
+      "source": "assets/product/v173/source/grading-zh.jpg",
+      "width": 3000,
+      "height": 1984
+    }
+  }
+}
