@@ -31,14 +31,155 @@
   const gradingPreview = $('#grading-preview');
   const gradingButton = $('#grading-toggle');
   const previewState = { visible:false, preference:'auto', failed:false, pending:false, revision:0 };
+  // Reveal typography by line without changing the localized content or reading order.
+  $$('[data-reveal]').forEach(group => {
+    const heading=group.querySelector('h2');
+    if (!heading) return;
+    group.classList.add('reveal-heading');
+    [...heading.children].filter(child=>['en','zh','ja','es'].some(lang=>child.classList.contains(lang))).forEach(copy=>{
+      const lines=copy.innerHTML.split(/<br\s*\/?\s*>/i);
+      copy.innerHTML=lines.map((line,index)=>`<span class="reveal-line" style="--line-index:${index}">${line}</span>`).join('');
+    });
+  });
+  $$('.feature-grid').forEach(grid => [...grid.children].forEach((card,index)=>card.style.setProperty('--reveal-delay',`${Math.min(index%3*90,180)}ms`)));
+  const progressCopies=$$('[data-progress-copy]');
+  function paintCopy() {
+    progressCopies.forEach(copy=>{
+      const phrases=[...copy.querySelectorAll('.scroll-phrase')];
+      const active=phrases.filter(phrase=>getComputedStyle(phrase.parentElement).display!=='none');
+      const rect=copy.getBoundingClientRect();
+      const progress=clamp((innerHeight*.86-rect.top)/(innerHeight*.52+rect.height*.3),0,1);
+      active.forEach((phrase,index)=>phrase.style.opacity=reduced.matches || !root.classList.contains('motion-enabled')?'1':String(.2+.8*clamp(progress*active.length-index,0,1)));
+    });
+  }
+  const viewerButtons=$$('[data-vendor-to]');
+  const viewerCards=$$('[data-peer]');
+  const vendorCells=$$('[data-vendor]');
+  const matrix=$('#capability-matrix');
+  const capabilityFocus=$('#capability-focus');
+  const matrixViewer=$('#matrix-viewer');
+  let peerAnimation;
+  function selectViewer(key,animate=false) {
+    peerAnimation?.cancel();
+    matrixViewer.value=key;
+    viewerButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.vendorTo===key)));
+    viewerCards.forEach(card=>{card.hidden=card.dataset.peer!==key;});
+    vendorCells.forEach(cell=>cell.classList.toggle('is-selected',cell.dataset.vendor===key));
+    const selected=viewerCards.find(card=>!card.hidden);
+    if(animate&&!reduced.matches)peerAnimation=selected.animate([{opacity:.4,transform:'translateY(8px)'},{opacity:1,transform:'none'}],{duration:300,easing:'cubic-bezier(.22,1,.36,1)'});
+    refreshGeometry();
+  }
+  viewerButtons.forEach((button,index)=>{
+    button.addEventListener('click',()=>selectViewer(button.dataset.vendorTo,true));
+    button.addEventListener('keydown',event=>{
+      let next;
+      if(event.key==='ArrowRight')next=(index+1)%viewerButtons.length;
+      if(event.key==='ArrowLeft')next=(index+viewerButtons.length-1)%viewerButtons.length;
+      if(event.key==='Home')next=0;
+      if(event.key==='End')next=viewerButtons.length-1;
+      if(next===undefined)return;
+      event.preventDefault();selectViewer(viewerButtons[next].dataset.vendorTo,true);viewerButtons[next].focus();
+    });
+  });
+  matrixViewer.addEventListener('change',()=>selectViewer(matrixViewer.value,true));
+  matrix.open=location.hash==='#capability-matrix';
+  $('.comparison-jump').addEventListener('click',()=>{matrix.open=true;refreshGeometry();});
+  addEventListener('hashchange',()=>{if(location.hash==='#capability-matrix')matrix.open=true;});
+  matrix.addEventListener('toggle',refreshGeometry);
+  capabilityFocus.addEventListener('click',()=>{
+    const focused=capabilityFocus.getAttribute('aria-pressed')!=='true';
+    capabilityFocus.setAttribute('aria-pressed',String(focused));
+    $$('[data-capability]').forEach(row=>row.hidden=focused&&row.dataset.focus!=='true');
+    refreshGeometry();
+  });
+  document.addEventListener('focusin',event=>{
+    event.target.closest('[data-reveal]')?.classList.add('revealed');
+  });
+  $$('[data-feature-carousel]').forEach(carousel=>{
+    const scroller=carousel.querySelector('.feature-grid'),cards=[...scroller.children];
+    const previous=carousel.querySelector('[data-gallery-prev]'),next=carousel.querySelector('[data-gallery-next]');
+    let index=0,stops=[];
+    const sync=()=>{
+      const max=Math.max(0,scroller.scrollWidth-scroller.clientWidth);
+      // Two cards fit on desktop: the clamped final offsets are one page, not two.
+      stops=[];
+      cards.forEach(card=>{
+        const left=clamp(card.offsetLeft-cards[0].offsetLeft,0,max);
+        if(!stops.length||left-stops.at(-1)>2)stops.push(left);
+      });
+      index=stops.reduce((closest,left,i)=>Math.abs(left-scroller.scrollLeft)<Math.abs(stops[closest]-scroller.scrollLeft)?i:closest,0);
+      previous.disabled=scroller.scrollLeft<2;
+      next.disabled=scroller.scrollLeft>=max-2;
+      carousel.querySelector('.gallery-status').textContent=`${String(index+1).padStart(2,'0')} / ${String(stops.length).padStart(2,'0')}`;
+    };
+    const go=direction=>{
+      sync();
+      scroller.scrollTo({left:stops[clamp(index+direction,0,stops.length-1)],behavior:reduced.matches?'instant':'smooth'});
+    };
+    previous.addEventListener('click',()=>go(-1));next.addEventListener('click',()=>go(1));
+    scroller.addEventListener('scroll',sync,{passive:true});
+    scroller.addEventListener('keydown',event=>{
+      if(event.target!==scroller||!['ArrowLeft','ArrowRight'].includes(event.key))return;
+      event.preventDefault();go(event.key==='ArrowRight'?1:-1);
+    });
+    addEventListener('resize',sync,{passive:true});sync();
+  });
   const progressBar = $('.reading-progress');
-  const bannerDuration = 4500;
-  const introDuration = 900;
-  let introSteps = 2;
+  const rail = $('.page-rail');
+  const railToggle = $('#rail-toggle');
+  const pageLinks = $$('.page-link');
+  const pageSections = pageLinks.map(link => $(link.getAttribute('href')));
+  let pageStops = [];
+
+  function closeRail() { railToggle.setAttribute('aria-expanded','false'); }
+  railToggle.addEventListener('click',() => railToggle.setAttribute('aria-expanded',String(railToggle.getAttribute('aria-expanded')!=='true')));
+  pageLinks.forEach(link => link.addEventListener('click',closeRail));
+  document.addEventListener('click',event => { if (!rail.contains(event.target)) closeRail(); });
+  document.addEventListener('keydown',event => {
+    if(event.key==='Escape' && railToggle.getAttribute('aria-expanded')==='true'){closeRail();railToggle.focus();}
+  });
+  function paintNavigation() {
+    const marker=scrollY+Math.min(220,innerHeight*.3);
+    let current=0;
+    pageStops.forEach((top,index)=>{if(top<=marker)current=index;});
+    // The last chapter may not reach the marker because there is little content below it.
+    if(scrollY>=geometry.total-2)current=pageLinks.length-1;
+    pageLinks.forEach((link,index)=>{
+      if(index===current)link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+  function nativePhotoURL(name) {
+    return `assets/product/v173/${name}?v=${window.DOMINO_NATIVE_VERSION?.[name] || 'original'}`;
+  }
+  function setupNativePhotos(scope=document) {
+    scope.querySelectorAll('.hdr-app-composite').forEach(composite => {
+      const photos=[...composite.querySelectorAll('.native-photo img')];
+      const status=composite.nextElementSibling;
+      const sync=()=>{if(status?.classList.contains('native-status'))status.hidden=!photos.some(img=>img.dataset.nativeState==='failed');};
+      photos.forEach(img=>{
+        if(img.dataset.nativeBound)return;
+        img.dataset.nativeBound='true';
+        const loaded=()=>{img.classList.add('is-ready');img.dataset.nativeState='ready';sync();};
+        const failed=()=>{img.classList.remove('is-ready');img.dataset.nativeState='failed';sync();};
+        img.addEventListener('load',loaded);
+        img.addEventListener('error',failed);
+        if(img.complete){if(img.naturalWidth>0)loaded();else if(img.currentSrc)failed();}
+      });
+      status?.querySelector('.native-retry')?.addEventListener('click',()=>{
+        photos.filter(img=>img.dataset.nativeState==='failed').forEach(img=>{
+          img.dataset.nativeState='loading';img.classList.remove('is-ready');
+          const url=new URL(img.src);url.searchParams.set('retry',String(Date.now()));img.src=url.href;
+        });
+        sync();
+      });
+    });
+  }
+  const bannerDuration = 6500;
   let preference = window.DominoLocale.initial.preference;
   let featureData, activeFeature, opener, geometry, captionAnimation;
   let bannerTimer = 0, wrapTimer = 0, pendingFrame = 0;
-  let bannerRemaining = introDuration, bannerStarted = 0;
+  let bannerRemaining = bannerDuration, bannerStarted = 0;
   let touchStart = null;
   const visible = new Set();
   // One inert clone lets the last slide move forward into the first without reversing.
@@ -75,20 +216,14 @@
   function stopBannerTimer() {
     if (bannerTimer) { clearTimeout(bannerTimer); bannerRemaining = Math.max(0,bannerRemaining-(Date.now()-bannerStarted)); bannerTimer = 0; }
   }
-  function endBannerIntro() {
-    if (!introSteps) return;
-    stopBannerTimer(); introSteps = 0; bannerRemaining = bannerDuration;
-    restartBannerProgress();
-  }
   function restartBannerProgress() {
-    hero.classList.toggle('banner-intro',introSteps > 0);
-    hero.style.setProperty('--banner-duration',`${introSteps > 0 ? introDuration : bannerDuration}ms`);
+    hero.style.setProperty('--banner-duration',`${bannerDuration}ms`);
     const progress = bannerButtons[state.banner].querySelector('.banner-progress');
     progress.style.display = 'none'; void progress.offsetWidth; progress.style.display = '';
   }
   function syncBanner() {
     stopBannerTimer();
-    const running = !state.bannerPaused && (!state.bannerHovered || introSteps>0) && !reduced.matches && state.bannerVisible && !document.hidden && !state.modal;
+    const running = !state.bannerPaused && !state.bannerHovered && !reduced.matches && state.bannerVisible && !document.hidden && !state.modal;
     hero.classList.toggle('banner-running',running);
     pauseButton.setAttribute('aria-pressed',String(state.bannerPaused || reduced.matches));
     pauseButton.setAttribute('aria-label',state.bannerPaused || reduced.matches ? localized('Resume automatic slides','继续自动轮播') : localized('Pause automatic slides','暂停自动轮播'));
@@ -98,9 +233,7 @@
   }
   function selectBanner(next, automatic = false) {
     stopBannerTimer();
-    if (automatic && introSteps) introSteps--;
-    else if (!automatic) introSteps = 0;
-    bannerRemaining = introSteps ? introDuration : bannerDuration;
+    bannerRemaining = bannerDuration;
     if (wrapTimer) { clearTimeout(wrapTimer); wrapTimer = 0; track.style.transition = 'none'; track.style.transform = `translateX(-${state.banner*100}%)`; void track.offsetWidth; track.style.transition = ''; }
     const wrap = automatic && state.banner === banners.length-1 && next === 0 && !reduced.matches;
     state.banner = next;
@@ -127,11 +260,11 @@
       event.preventDefault();state.bannerPaused=true;selectBanner(next);bannerButtons[next].focus();
     });
   });
-  pauseButton.addEventListener('click',() => { endBannerIntro(); state.bannerPaused = !state.bannerPaused; syncBanner(); });
+  pauseButton.addEventListener('click',() => { state.bannerPaused = !state.bannerPaused; syncBanner(); });
   hero.addEventListener('pointerenter',event => {if(event.pointerType==='mouse'){state.bannerHovered=true;syncBanner();}});
   hero.addEventListener('pointerleave',event => {if(event.pointerType==='mouse'){state.bannerHovered=false;syncBanner();}});
   // A keyboard user keeps the focused control; automatic advancement cannot hide it.
-  hero.addEventListener('focusin',event => { if (event.target.closest('.hero-slide')) { endBannerIntro(); state.bannerPaused = true; syncBanner(); } });
+  hero.addEventListener('focusin',event => { if (event.target.closest('.hero-slide')) { state.bannerPaused = true; syncBanner(); } });
   hero.addEventListener('touchstart',event => { const touch=event.touches[0]; touchStart={x:touch.clientX,y:touch.clientY}; },{passive:true});
   hero.addEventListener('touchend',event => {
     if (!touchStart) return;
@@ -175,6 +308,7 @@
   function refreshGeometry() {
     const rect=comparison.getBoundingClientRect();
     const navHeight=$('.nav').offsetHeight;
+    pageStops=pageSections.map(section=>section.getBoundingClientRect().top+scrollY);
     geometry={top:rect.top+scrollY-navHeight,travel:Math.max(1,rect.height-innerHeight+navHeight),total:Math.max(1,root.scrollHeight-innerHeight)};
     schedule();
   }
@@ -182,6 +316,8 @@
   function paint() {
     pendingFrame=0;
     if (!geometry) return;
+    paintCopy();
+    paintNavigation();
     progressBar.style.transform=`scaleX(${clamp(scrollY/geometry.total,0,1)})`;
     if (!comparison.classList.contains('scroll-story') || !visible.has(comparison)) return;
     const progress=clamp((scrollY-geometry.top)/geometry.travel,0,1);
@@ -202,9 +338,11 @@
   function configureMotion() {
     const pinned=wide.matches && !reduced.matches && typeof IntersectionObserver==='function';
     comparison.classList.toggle('scroll-story',pinned);
+    if(wide.matches)closeRail();
     root.classList.toggle('motion-enabled',!reduced.matches && typeof IntersectionObserver==='function');
     if (!pinned) frames.forEach(frame => { frame.style.opacity=''; frame.style.transform=''; frame.style.visibility=''; });
-    if (reduced.matches) { endBannerIntro(); $$('[data-reveal]').forEach(element => element.classList.add('revealed')); state.loopWanted=false; }
+    if (reduced.matches) { $$('[data-reveal]').forEach(element => element.classList.add('revealed')); state.loopWanted=false; }
+    if(reduced.matches)peerAnimation?.cancel();
     updateScene(state.scene); syncLoop(); syncPreview(); syncBanner(); refreshGeometry();
   }
   function goToScene(index) {
@@ -325,7 +463,7 @@
     gradingPreview.load();
   });
   function openDialog(dialog,trigger) {
-    opener=trigger;dialog.showModal();state.modal=dialog.id;document.body.classList.add('modal-open');
+    opener=trigger;dialog.showModal();state.modal=dialog.id;closeRail();document.body.classList.add('modal-open');
     syncLoop();syncPreview();syncBanner();dialog.querySelector('.close').focus();
   }
   $$('dialog').forEach(dialog => {
@@ -337,8 +475,9 @@
   function renderFeature(item) {
     const copy=item[{zh:'zh-Hans',en:'en-US',ja:'ja',es:'es'}[state.lang]],size=window.DOMINO_MEDIA[item.id][mediaLanguage()];
     const screenshot=`<img class="detail-screen" src="${imageURL(item.id,1920)}" alt="${escape(copy.screenLabel)}" width="${size.width}" height="${size.height}">`;
-    const visual=item.id===3?`<div class="hdr-app-composite">${screenshot}<div class="native-photo sdr-native"><img src="assets/product/v173/_DSC0828-1-sdr.avif" width="1000" height="667" alt="${escape(localized('Original SDR AVIF photograph','原始 SDR AVIF 图像'))}"></div><div class="native-photo hdr-native"><img src="assets/product/v173/_DSC0828-1.avif" width="1000" height="667" alt="${escape(localized('Original HDR AVIF photograph','原始 HDR AVIF 图像'))}"></div></div>`:screenshot;
+    const visual=item.id===3?`<div class="hdr-app-composite">${screenshot}<div class="native-photo sdr-native"><img src="${nativePhotoURL('_DSC0828-1-sdr.avif')}" width="1000" height="667" alt="${escape(localized('Original SDR AVIF photograph','原始 SDR AVIF 图像'))}"></div><div class="native-photo hdr-native"><img src="${nativePhotoURL('_DSC0828-1.avif')}" width="1000" height="667" alt="${escape(localized('Original HDR AVIF photograph','原始 HDR AVIF 图像'))}"></div></div><p class="native-status" role="status" hidden><span>${escape(localized('Original images could not be loaded. Showing the interface preview.','原图暂时无法加载，当前显示界面预览。'))}</span> <button class="native-retry" type="button">${escape(localized('Retry original images','重新加载原图'))}</button></p>`:screenshot;
     $('.dialog-content').innerHTML=`<p class="eyebrow">${escape(localized('Image workspace','图像工作空间'))}</p><h2 id="detail-title">${copy.title.map(escape).join(' ')}</h2><p>${escape(copy.description)}</p>${visual}${state.lang==='ja'||state.lang==='es'?`<p class="interface-note">${escape(localized('English interface demonstration','英文界面演示'))}</p>`:''}`;
+    setupNativePhotos($('.dialog-content'));
   }
   if(typeof $('#feature-dialog').showModal==='function'){
     root.classList.add('enhanced');
@@ -350,5 +489,5 @@
     }));
     $$('[data-film]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();film.src='assets/product/v173/grading-demo.mp4';openDialog($('#film-dialog'),link);film.play().catch(()=>{});}));
   }
-  restartBannerProgress();setLanguage(window.DominoLocale.initial.language);configureMotion();
+  setupNativePhotos();restartBannerProgress();setLanguage(window.DominoLocale.initial.language);configureMotion();
 })();

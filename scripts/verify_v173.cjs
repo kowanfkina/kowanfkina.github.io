@@ -124,22 +124,23 @@ async function interactions(browser,base,output){
 async function motion(browser,base,output){
   const page=await testPage(browser,{viewport:{width:1440,height:960}}),errors=monitor(page);
   await page.goto(`${base}/?lang=zh`);
+  await page.mouse.move(5,5);
   // Wait for real timers, without calling implementation methods or faking the clock.
   const firstTour=[];
   for(const index of [1,2,0]){
-    await page.waitForFunction(index=>document.querySelector(`[data-banner-to="${index}"]`).getAttribute('aria-pressed')==='true',index,{timeout:10000});
+    await page.waitForFunction(index=>document.querySelector(`[data-banner-to="${index}"]`).getAttribute('aria-pressed')==='true',index,{timeout:8500});
     await page.waitForFunction(index=>Math.abs(document.querySelector('#hero-track').getBoundingClientRect().x+index*innerWidth)<1,index);
     const elapsed=await page.evaluate(()=>performance.now());
     if(index!==0)firstTour.push({index,visibleMs:elapsed});
     if(index===2){
-      assert.ok(elapsed<3000,`third core feature visible within three seconds: ${elapsed}ms`);
+      assert.ok(elapsed>=12500&&elapsed<15500,`third core feature follows two readable slide intervals: ${elapsed}ms`);
       assert.equal(await page.locator('[data-banner="2"] img').evaluate(image=>image.complete&&image.naturalWidth>0),true);
     }
     await page.screenshot({path:path.join(output,`automatic-banner-${index}.png`),scale:'css'});
   }
-  await page.locator('#banner-pause').click();await page.waitForTimeout(4800);
+  await page.locator('#banner-pause').click();await page.waitForTimeout(6800);
   assert.equal(await page.locator('[data-banner-to="0"]').getAttribute('aria-pressed'),'true','paused for longer than a slide interval');
-  await page.locator('#banner-pause').click();await page.mouse.move(5,5);await page.waitForFunction(()=>document.querySelector('[data-banner-to="1"]').getAttribute('aria-pressed')==='true',null,{timeout:10000});
+  await page.locator('#banner-pause').click();await page.mouse.move(5,5);await page.waitForFunction(()=>document.querySelector('[data-banner-to="1"]').getAttribute('aria-pressed')==='true',null,{timeout:8500});
   await decode(page.locator('#compare'));
   const box=await page.locator('#compare').evaluate(element=>({top:element.getBoundingClientRect().top+scrollY-71,travel:element.offsetHeight-innerHeight+71}));
   for(let index=0;index<3;index++){

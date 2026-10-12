@@ -62,13 +62,10 @@ async function interaction(browser,base) {
   const page=await pageFor(browser,{viewport:{width:1440,height:960}});
   await page.goto(`${base}/?lang=zh`);
   await page.mouse.move(950,350);
-  await page.waitForFunction(()=>document.querySelector('[data-banner-to="2"]').getAttribute('aria-pressed')==='true');
-  await page.waitForTimeout(600);
-  assert.equal(await page.locator('#overview').evaluate(e=>e.classList.contains('banner-running')),false,'intro completes before hover pauses the reading cycle');
-  await page.waitForTimeout(4700);
-  assert.equal(await page.locator('[data-banner-to="2"]').getAttribute('aria-pressed'),'true');
+  await page.waitForTimeout(6800);
+  assert.equal(await page.locator('[data-banner-to="0"]').getAttribute('aria-pressed'),'true','hover holds the initial slide for reading');
   await page.mouse.move(5,5);
-  await page.waitForFunction(()=>document.querySelector('[data-banner-to="0"]').getAttribute('aria-pressed')==='true',null,{timeout:6500});
+  await page.waitForFunction(()=>document.querySelector('[data-banner-to="1"]').getAttribute('aria-pressed')==='true',null,{timeout:8500});
   await page.mouse.move(950,350);await page.locator('#banner-pause').click();await page.mouse.move(5,5);
   assert.equal(await page.locator('#overview').evaluate(e=>e.classList.contains('banner-running')),false,'leaving hover cannot override a manual pause');
   await page.locator('[data-banner-to="0"]').press('End');
@@ -90,7 +87,7 @@ async function interaction(browser,base) {
   }
   assert.ok(await page.locator('.compare-caption').evaluate(e=>e.getAnimations().filter(a=>a.playState==='running').length)<=1,'rapid scroll does not stack caption animations');
   await page.close();
-  return [{hoverAndManualPause:'passed',firstTourWhileHovered:'passed',keyboardCarousel:'passed',rapidCaptionChanges:'passed'}];
+  return [{hoverAndManualPause:'passed',initialHoverPause:'passed',keyboardCarousel:'passed',rapidCaptionChanges:'passed'}];
 }
 
 module.exports=async (browser,base='http://127.0.0.1:8765',group='all') => {

@@ -71,12 +71,12 @@ module.exports = async function verifyAnalytics(browser,base='http://127.0.0.1:8
     assert.deepEqual(installed.errors,[]);await installed.context.close();results.push({tags:'all three IDs installed once in head',pageLoadAndOtherActions:'no conversions'});
   
   }
-  const entries=[['header','.nav a.button',null],['browser banner','[data-banner="0"] .button',0],['six-image banner','[data-banner="1"] .button',1],['grading banner','[data-banner="2"] .button',2],['trial plan','#trial-download',null],['lifetime plan','#lifetime-download',null]];
+  const entries=[['header','.nav a.button',null],['browser banner','[data-banner="0"] .button',0],['six-image banner','[data-banner="1"] .button',1],['grading banner','[data-banner="2"] .button',2],['trial plan','#trial-download',null],['lifetime plan','#lifetime-download',null],['sidebar download','.rail-download',null],['viewer comparison','#compare-download',null]];
   if(group==='all'||group==='entries'){
     for(const [name,selector,banner] of entries){
       const session=await setup();await session.page.goto(`${base}/?lang=zh`);
       if(banner!==null)await session.page.locator(`[data-banner-to="${banner}"]`).click();
-      const elapsed=await navigate(session,session.page.locator(selector).locator('span.zh'));
+      const elapsed=await navigate(session,session.page.locator(selector));
       assert.deepEqual(conversions(session),[{kind:'event',name:'conversion',send_to:CONVERSION,event_timeout:1000,hasCallback:true}]);
       assert.equal(session.requests.filter(url=>url===STORE).length,1,'duplicate callbacks must not repeat navigation');
       assert.deepEqual(session.errors,[]);await session.context.close();results.push({entry:name,conversionCount:1,navigationMs:elapsed});

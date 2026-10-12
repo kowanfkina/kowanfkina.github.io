@@ -9,7 +9,7 @@
     "es": "Funciones"
   },
   "Support": {
-    "zh": "支持",
+    "zh": "联系支持",
     "ja": "サポート",
     "es": "Soporte"
   },
@@ -96,8 +96,8 @@
     "es": "formatos, incluido RAW"
   },
   "synchronized views": {
-    "zh": "图同步对比",
-    "ja": "画像を同期比較",
+    "zh": "同步比较",
+    "ja": "同期比較",
     "es": "vistas sincronizadas"
   },
   "a new way to see": {
@@ -1563,5 +1563,430 @@
     "zh": "试用结束后，订阅会按 Apple 确认页显示的价格自动续订并收费。如果不打算继续，请按 Apple 提示，至少在试用结束前 24 小时于订阅管理中取消。具体计费条件会在确认页展示。",
     "ja": "体験終了後、Apple の確認画面に表示された価格で自動更新・課金されます。継続しない場合は、Apple の案内に従って、終了の24時間前までに購読設定で解約してください。課金の詳細は確認画面に表示されます。",
     "es": "La suscripción se renueva automáticamente al precio que muestra Apple. Si no quieres continuar, sigue las instrucciones de Apple para cancelarla en los ajustes al menos 24 horas antes de que acabe la prueba. La pantalla de confirmación muestra la facturación."
+  },
+  "Page chapters": {
+    "zh": "章节导航",
+    "ja": "ページの目次",
+    "es": "Secciones de la página"
+  },
+  "Overview": {
+    "zh": "首页概览",
+    "ja": "概要",
+    "es": "Inicio"
+  },
+  "Image comparison": {
+    "zh": "专业对比",
+    "ja": "画像比較",
+    "es": "Comparación"
+  },
+  "Regional statistics": {
+    "zh": "局部统计",
+    "ja": "領域統計",
+    "es": "Estadísticas"
+  },
+  "HDR highlights": {
+    "zh": "HDR 高光",
+    "ja": "HDR ハイライト",
+    "es": "Luz HDR"
+  },
+  "Image tools": {
+    "zh": "图像工具",
+    "ja": "画像ツール",
+    "es": "Herramientas"
+  },
+  "Trial & lifetime": {
+    "zh": "试用与买断",
+    "ja": "体験と購入",
+    "es": "Prueba y compra"
+  },
+  "Download on the App Store": {
+    "zh": "在 App Store 下载",
+    "ja": "App Store でダウンロード",
+    "es": "Descargar en el App Store"
+  },
+  "Original images could not be loaded. Showing the interface preview.": {
+    "zh": "原图暂时无法加载，当前显示界面预览。",
+    "ja": "元画像を読み込めません。画面プレビューを表示しています。",
+    "es": "No se pudieron cargar los originales. Se muestra la vista de la interfaz."
+  },
+  "Retry original images": {
+    "zh": "重新加载原图",
+    "ja": "元画像を再読み込み",
+    "es": "Reintentar originales"
+  },
+  "Viewer comparison": {
+    "zh": "软件对比",
+    "ja": "ビューア比較",
+    "es": "Comparar visores"
+  },
+  "LOOK. MEASURE. DECIDE.": {
+    "zh": "观察、量化，再判断。",
+    "ja": "見て、測って、判断する。",
+    "es": "OBSERVA. MIDE. DECIDE."
+  },
+  "<span class=\"scroll-phrase\">Compare the same detail across <strong>up to six images.</strong></span> <span class=\"scroll-phrase\">Measure the difference with <strong>pixel and region statistics.</strong></span> <span class=\"scroll-phrase\">Carry the decision into <strong>blind ranking and reports.</strong></span>": {
+    "zh": "<span class=\"scroll-phrase\">让 <strong>最多六张图</strong>，聚焦同一处细节。</span><span class=\"scroll-phrase\">用 <strong>像素与区域统计</strong>，为差异找到依据。</span><span class=\"scroll-phrase\">再把判断，带入 <strong>匿名排序与评审报告。</strong></span>",
+    "ja": "<span class=\"scroll-phrase\"><strong>最大6枚の画像</strong>で、同じ細部を見る。</span> <span class=\"scroll-phrase\"><strong>ピクセル・領域統計</strong>で、違いを確かめる。</span> <span class=\"scroll-phrase\"><strong>匿名順位付けとレポート</strong>へ、判断をつなぐ。</span>",
+    "es": "<span class=\"scroll-phrase\">Compara el mismo detalle en <strong>hasta seis imágenes.</strong></span> <span class=\"scroll-phrase\">Mide las diferencias con <strong>píxeles y estadísticas regionales.</strong></span> <span class=\"scroll-phrase\">Decide con <strong>ranking ciego e informes.</strong></span>"
+  },
+  "regional color & luminance": {
+    "zh": "区域色彩与亮度",
+    "ja": "領域の色と輝度",
+    "es": "color y luminancia regional"
+  },
+  "from judgment to a record": {
+    "zh": "从判断，到可分享的记录",
+    "ja": "判断を、共有できる記録に",
+    "es": "de la decisión al registro"
+  },
+  "CHOOSE YOUR WORKFLOW": {
+    "zh": "选工具，也是在选工作流。",
+    "ja": "自分の作業に合うツールを。",
+    "es": "ELIGE TU FLUJO DE TRABAJO"
+  },
+  "Comparison is only the start.<br><em>Make every decision count.</em>": {
+    "zh": "对比，不止并排。<br><em>让判断，有据可依。</em>",
+    "ja": "並べて見る、その先へ。<br><em>根拠ある判断へ。</em>",
+    "es": "Comparar es el principio.<br><em>Decide con fundamento.</em>"
+  },
+  "Six synchronized views. Pixel and region statistics. Blind ranking and reports. A connected image workflow, built for Mac.": {
+    "zh": "六图同步、像素与区域统计、匿名排序与报告。在一个 Mac 工作台里，把观察、验证与判断连起来。",
+    "ja": "6枚の同期表示、ピクセル・領域統計、匿名順位付けとレポート。Macでひとつにつながる画像ワークフロー。",
+    "es": "Seis vistas sincronizadas, estadísticas, ranking ciego e informes. Un flujo conectado, diseñado para Mac."
+  },
+  "Observe. Measure. Decide.": {
+    "zh": "看清、量化，再判断。",
+    "ja": "見て、測って、判断する。",
+    "es": "Observa. Mide. Decide."
+  },
+  "Difference and overlay, ROI statistics, staging, blind ranking and exportable reports — in one workspace.": {
+    "zh": "差异与叠加、区域统计、中转站、匿名 Rank 与可导出的报告，接成一套专业流程。",
+    "ja": "差分・重ね表示、領域統計、トレイ、匿名順位付け、レポート出力までをひとつに。",
+    "es": "Diferencias, superposición, regiones, bandeja, ranking ciego e informes en un solo espacio."
+  },
+  "Explore the 2-week trial*": {
+    "zh": "了解两周免费试用*",
+    "ja": "2週間の無料体験を見る*",
+    "es": "Ver la prueba de 2 semanas*"
+  },
+  "A library-first workflow.": {
+    "zh": "以素材管理为中心。",
+    "ja": "ライブラリ管理を中心に。",
+    "es": "Una biblioteca organizada."
+  },
+  "Broad format support, cataloging and up to four synchronized comparison views.": {
+    "zh": "丰富格式、目录管理，以及最多四图同步比较。",
+    "ja": "幅広い形式、カタログ管理、最大4枚の同期比較。",
+    "es": "Muchos formatos, catálogo y comparación sincronizada de hasta cuatro imágenes."
+  },
+  "Official features": {
+    "zh": "查看官方功能",
+    "ja": "公式機能を見る",
+    "es": "Funciones oficiales"
+  },
+  "View. Edit. Enhance.": {
+    "zh": "查看、编辑与智能增强。",
+    "ja": "閲覧、編集、画質向上。",
+    "es": "Ver, editar y mejorar."
+  },
+  "A media viewer with color tools, batch editing and AI enhancements. Some tools require Plus.": {
+    "zh": "媒体查看、调色、批量编辑与 AI 增强，部分工具需要 Plus。",
+    "ja": "メディア閲覧、色調整、一括編集、AI画質向上。一部はPlusが必要です。",
+    "es": "Visor con color, edición por lotes y mejoras con IA. Algunas herramientas requieren Plus."
+  },
+  "Images, archives and media.": {
+    "zh": "图像、压缩包与媒体浏览。",
+    "ja": "画像、アーカイブ、メディア。",
+    "es": "Imágenes, archivos y medios."
+  },
+  "Browse local and network files, read archives and use single-image or two-page layouts.": {
+    "zh": "浏览本地与网络文件、直接查看压缩包，支持单图与双页显示。",
+    "ja": "ローカル・ネットワークのファイルやアーカイブを、単画像・見開きで閲覧。",
+    "es": "Archivos locales y de red, archivos comprimidos y vistas de una imagen o doble página."
+  },
+  "A familiar Windows viewer.": {
+    "zh": "熟悉的 Windows 看图工具。",
+    "ja": "Windowsの画像ビューア。",
+    "es": "Un visor clásico de Windows."
+  },
+  "Browse, rate and edit photos, with RAW support and side-by-side comparison of up to four images.": {
+    "zh": "浏览、评级与编辑照片，支持 RAW 和最多四图并排比较。",
+    "ja": "RAW対応で、閲覧、評価、編集、最大4枚の並列比較ができます。",
+    "es": "Ver, puntuar y editar fotos, con RAW y comparación de hasta cuatro imágenes."
+  },
+  "Choose a viewer. Compare the workflow that matters to you.": {
+    "zh": "选择一款软件，看看哪套流程更适合你。",
+    "ja": "気になるツールを選んで、自分の作業に合うか比較。",
+    "es": "Elige un visor y compara el flujo que necesitas."
+  },
+  "Compare the capabilities": {
+    "zh": "逐项比较功能",
+    "ja": "機能を比較する",
+    "es": "Comparar funciones"
+  },
+  "12 capabilities. A clearer choice.": {
+    "zh": "12 项能力，把差别看清。",
+    "ja": "12の機能で、違いを確認。",
+    "es": "12 capacidades. Elige con claridad."
+  },
+  "Domino Image Viewer stays beside your selected viewer on smaller screens.": {
+    "zh": "小屏并排比较 Domino Image Viewer 与所选软件。",
+    "ja": "小さな画面では、Domino Image Viewerと選択したツールを並べて表示。",
+    "es": "En pantallas pequeñas, Domino Image Viewer se compara con el visor elegido."
+  },
+  "Focus on inspection & review": {
+    "zh": "只看专业判断能力",
+    "ja": "確認・評価の機能に絞る",
+    "es": "Centrar en inspección y evaluación"
+  },
+  "Image viewer capability comparison": {
+    "zh": "看图软件功能对比",
+    "ja": "画像ビューアの機能比較",
+    "es": "Comparación de funciones de visores"
+  },
+  "Capability": {
+    "zh": "能力",
+    "ja": "機能",
+    "es": "Capacidad"
+  },
+  "Fast browsing": {
+    "zh": "快速浏览",
+    "ja": "画像の閲覧",
+    "es": "Navegación rápida"
+  },
+  "Supported": {
+    "zh": "支持",
+    "ja": "対応",
+    "es": "Compatible"
+  },
+  "RAW & image formats": {
+    "zh": "RAW / 多格式",
+    "ja": "RAW・多形式",
+    "es": "RAW y formatos"
+  },
+  "Synchronized comparison": {
+    "zh": "多图同步比较",
+    "ja": "同期比較",
+    "es": "Comparación sincronizada"
+  },
+  "1–6 images": {
+    "zh": "1～6 图",
+    "ja": "1〜6枚",
+    "es": "1–6 imágenes"
+  },
+  "Up to 4": {
+    "zh": "最多 4 图",
+    "ja": "最大4枚",
+    "es": "Hasta 4"
+  },
+  "Not listed in the reviewed information": {
+    "zh": "本次资料未列明",
+    "ja": "確認した資料に記載なし",
+    "es": "No indicado en la información consultada"
+  },
+  "Two-page view¹": {
+    "zh": "双页显示¹",
+    "ja": "見開き表示¹",
+    "es": "Doble página¹"
+  },
+  "Up to 4 side by side": {
+    "zh": "最多 4 图并排",
+    "ja": "最大4枚の並列",
+    "es": "Hasta 4 en paralelo"
+  },
+  "Difference / tolerance": {
+    "zh": "差异与容差",
+    "ja": "差分・しきい値",
+    "es": "Diferencias y tolerancia"
+  },
+  "Overlay": {
+    "zh": "叠加对照",
+    "ja": "重ね合わせ",
+    "es": "Superposición"
+  },
+  "Cross-pane overlay": {
+    "zh": "跨窗口叠加对照",
+    "ja": "ペイン間の重ね表示",
+    "es": "Superposición entre vistas"
+  },
+  "Editing tool · Plus²": {
+    "zh": "编辑工具 · Plus²",
+    "ja": "編集ツール・Plus²",
+    "es": "Edición · Plus²"
+  },
+  "Pixel Inspector": {
+    "zh": "像素检查",
+    "ja": "ピクセル確認",
+    "es": "Inspector de píxeles"
+  },
+  "Grid + RGB / HSV / Y": {
+    "zh": "网格 + RGB / HSV / Y",
+    "ja": "グリッド＋RGB / HSV / Y",
+    "es": "Cuadrícula + RGB / HSV / Y"
+  },
+  "Color readout": {
+    "zh": "色值查看",
+    "ja": "色の値を表示",
+    "es": "Lectura de color"
+  },
+  "Pixel display": {
+    "zh": "像素显示",
+    "ja": "ピクセル表示",
+    "es": "Visualización de píxeles"
+  },
+  "Magnifier": {
+    "zh": "放大查看",
+    "ja": "拡大表示",
+    "es": "Lupa"
+  },
+  "ROI Statistics": {
+    "zh": "局部区域统计",
+    "ja": "領域統計・ROI",
+    "es": "Estadísticas de región"
+  },
+  "RGB / HSV / Y means": {
+    "zh": "RGB / HSV / Y 均值",
+    "ja": "RGB / HSV / Y 平均値",
+    "es": "Medias RGB / HSV / Y"
+  },
+  "Histogram": {
+    "zh": "直方图",
+    "ja": "ヒストグラム",
+    "es": "Histograma"
+  },
+  "Staging Tray": {
+    "zh": "中转站",
+    "ja": "画像トレイ",
+    "es": "Bandeja de imágenes"
+  },
+  "Collect → compare": {
+    "zh": "集中收集 → 直接对比",
+    "ja": "集めて、そのまま比較",
+    "es": "Reunir → comparar"
+  },
+  "Review / Ranking": {
+    "zh": "评审 / 匿名 Rank",
+    "ja": "評価・匿名順位付け",
+    "es": "Evaluación y ranking"
+  },
+  "Ratings + blind ranking": {
+    "zh": "评分 + 匿名排序",
+    "ja": "評価＋匿名順位付け",
+    "es": "Puntuación + ranking ciego"
+  },
+  "Ratings & labels": {
+    "zh": "评分 / 标签",
+    "ja": "評価・ラベル",
+    "es": "Puntuación y etiquetas"
+  },
+  "Ratings / labels · Plus": {
+    "zh": "评分 / 标签 · Plus",
+    "ja": "評価・ラベル・Plus",
+    "es": "Puntuación / etiquetas · Plus"
+  },
+  "Ratings": {
+    "zh": "评分",
+    "ja": "評価",
+    "es": "Puntuación"
+  },
+  "Ratings & tags": {
+    "zh": "评分 / 标记",
+    "ja": "評価・タグ",
+    "es": "Puntuación y etiquetas"
+  },
+  "Review reports": {
+    "zh": "评审报告",
+    "ja": "評価レポート",
+    "es": "Informes de evaluación"
+  },
+  "HTML / Markdown": {
+    "zh": "HTML / Markdown",
+    "ja": "HTML / Markdown",
+    "es": "HTML / Markdown"
+  },
+  "AI / CV workflow focus³": {
+    "zh": "AI / CV 工作流³",
+    "ja": "AI / CVでの用途³",
+    "es": "Enfoque AI / CV³"
+  },
+  "Version validation": {
+    "zh": "版本验证与评审",
+    "ja": "バージョン検証・評価",
+    "es": "Validación de versiones"
+  },
+  "Library management": {
+    "zh": "素材管理",
+    "ja": "素材管理",
+    "es": "Gestión de biblioteca"
+  },
+  "AI editing": {
+    "zh": "AI 编辑增强",
+    "ja": "AI編集・画質向上",
+    "es": "Edición con IA"
+  },
+  "Media browsing": {
+    "zh": "媒体浏览",
+    "ja": "メディア閲覧",
+    "es": "Exploración de medios"
+  },
+  "Photo selection": {
+    "zh": "照片筛选",
+    "ja": "写真選別",
+    "es": "Selección de fotos"
+  },
+  "✓ Supported. — Not listed in the reviewed information; it does not mean absent from every version. Editions and features can change.": {
+    "zh": "✓ 支持。— 表示本次资料未列明，不代表所有版本均不支持。功能可能因版本或购买方案而异。",
+    "ja": "✓ 対応。— は確認した資料に記載がない機能です。全バージョンで非対応とは限りません。エディションにより異なります。",
+    "es": "✓ Compatible. — No indicado en la información consultada; no implica ausencia en todas las versiones. Las ediciones pueden variar."
+  },
+  "¹ Two-page display is not a synchronized comparison workflow. ² Pixea Plus offers an editing overlay tool. ³ Workflow focus describes use cases, not an AI benchmark. Reports here mean review/ranking statistics and exports.": {
+    "zh": "¹ 双页显示与多图同步比较并非同一功能。² Pixea Plus 提供编辑叠加工具。³ 工作流侧重点为使用场景，不是 AI 性能评分。报告指评审/排位统计及导出。",
+    "ja": "¹ 見開き表示は同期比較とは異なります。² Pixea Plusは編集用重ね合わせに対応。³ 用途の比較でありAI性能評価ではありません。レポートは評価・順位統計と出力を指します。",
+    "es": "¹ La doble página no equivale a comparación sincronizada. ² Pixea Plus incluye superposición de edición. ³ El enfoque describe usos, no rendimiento de IA. Los informes son estadísticas y exportaciones de evaluación."
+  },
+  "References · checked 12 Oct 2026": {
+    "zh": "参考资料 · 2026 年 10 月 12 日核对",
+    "ja": "参考資料・2026年10月12日確認",
+    "es": "Referencias · consultadas el 12 oct 2026"
+  },
+  "Choose a viewer to compare": {
+    "zh": "选择一款看图软件进行对比",
+    "ja": "比較するビューアを選択",
+    "es": "Elige un visor para comparar"
+  },
+  "Comparison layout gallery": {
+    "zh": "多图布局展示",
+    "ja": "比較レイアウトのギャラリー",
+    "es": "Galería de diseños de comparación"
+  },
+  "Previous layout": {
+    "zh": "上一个布局",
+    "ja": "前のレイアウト",
+    "es": "Diseño anterior"
+  },
+  "Next layout": {
+    "zh": "下一个布局",
+    "ja": "次のレイアウト",
+    "es": "Diseño siguiente"
+  },
+  "Compare tools for browsing, inspection and review.": {
+    "zh": "从浏览、检查到评审，逐项比较。",
+    "ja": "閲覧、確認、評価の機能を比べる。",
+    "es": "Compara herramientas de navegación, inspección y evaluación."
+  },
+  "editing & enhancement tools": {
+    "zh": "编辑与增强工具",
+    "ja": "編集・画質向上ツール",
+    "es": "edición y mejora"
+  },
+  "two-page display": {
+    "zh": "双页显示",
+    "ja": "見開き表示",
+    "es": "vista de doble página"
+  },
+  "side-by-side views": {
+    "zh": "并排比较",
+    "ja": "並列比較",
+    "es": "vistas en paralelo"
   }
 }
